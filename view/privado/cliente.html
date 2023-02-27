@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/22083da215.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../resources/css/estiloprivado.css" />
+    <title>Cliente</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="casa col-2">
+            <!--Navbar principal-->
+            <nav></nav>
+        </div>
+        <div class="col-10">
+            <!--Menu Header-->
+            <div class="row">
+                <header></header>
+            </div>
+            <!--Main principal-->
+            <div class="row">
+                <main class="container">
+                    <section>
+                        <div class="row meu">
+                            <div class="col-12k">
+                                <div class="row">
+                                    <h1 class="text-center">Clientes</h1>
+                                    <br>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+
+
+                                                    <td>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Buscador: Buscar por</option>
+                                                            <option value="1">Nombre</option>
+                                                            <option value="2">DUI</option>
+                                                            <option value="3">Correo</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn"><img height="20px"
+                                                                width="20px"
+                                                                src="../../resources/img/imgtablas/check.png"
+                                                                alt="check">
+                                                        </button>
+
+                                                    </td>
+                                                    <td>
+                                                        <div class="rounded float-end">
+                                                            <button type="button" class="btn btn-warning"><img
+                                                                    height="20px" width="20px"
+                                                                    src="../../resources/img/imgtablas/cuaderno.png"
+                                                                    alt="eliminar"></button>
+                                                            <!-- Modal Trigger para Agregar -->
+                                                            <button type="button" class="btn"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#AgregarClientes"><img height="25px"
+                                                                    width="25px"
+                                                                    src="../../resources/img/imgtablas/agregar.png"
+                                                                    alt="agregar">
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                        </table>
+                                    </div>
+                                    <br>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Apellido </th>
+                                                <th scope="col">DUI</th>
+                                                <th scope="col">Correo</th>
+                                                <th scope="col">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Max Benjamín</td>
+                                                <td>Herrador Marroquín</td>
+                                                <td>06751889-4</td>
+                                                <td>azulleinmaroco@gmail.com</td>
+                                                <th scope="col">
+                                                    <button type="button" class="btn btn-success"> <img height="20px"
+                                                            width="20px" src="../../resources/img/imgtablas/ojo.png"
+                                                            alt="ver">
+                                                    </button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/update.png"
+                                                            alt="actualizar">
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger"><img height="20px"
+                                                            width="20px" src="../../resources/img/imgtablas/delete.png"
+                                                            alt="eliminar">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <td>Fátima Epifanía</td>
+                                                <td>Flores Díaz</td>
+                                                <td>09876567-4</td>
+                                                <td>Flores@gmail.com</td>
+                                                <th scope="col"> <button type="button" class="btn btn-success"> <img
+                                                            height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/ojo.png"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/update.png"
+                                                            alt="actualizar">
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger"><img height="20px"
+                                                            width="20px" src="../../resources/img/imgtablas/delete.png"
+                                                            alt="eliminar">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <td>Christian Sebastián</td>
+                                                <td>Ellerbrock Barahona</td>
+                                                <td>85697435-5</td>
+                                                <td>christian@gmail.com</td>
+                                                <th scope="col"> <button type="button" class="btn btn-success"> <img
+                                                            height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/ojo.png"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/update.png"
+                                                            alt="actualizar">
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger"><img height="20px"
+                                                            width="20px" src="../../resources/img/imgtablas/delete.png"
+                                                            alt="eliminar">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <td>Michelle Alejandra</td>
+                                                <td>Paíz Orellana</td>
+                                                <td>56788999-4</td>
+                                                <td>Paiz1234@gmail.com</td>
+                                                <th scope="col"> <button type="button" class="btn btn-success"> <img
+                                                            height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/ojo.png"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
+                                                            src="../../resources/img/imgtablas/update.png"
+                                                            alt="actualizar">
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger"><img height="20px"
+                                                            width="20px" src="../../resources/img/imgtablas/delete.png"
+                                                            alt="eliminar">
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Para Actualizar -->
+    <div class="modal fade" id="AgregarClientes" tabindex="-1" aria-labelledby="AgregarClientes" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AgregarClientes">Actualizar clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                <div class="modal-body">
+                    <label for="">Nombres del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Apellidos del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Dui</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Correo</label><br>
+                    <input type="email" class="labeltext"><br>
+                    <label for="">Telefono</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Fecha nacimientso</label><br>
+                    <input type="date"><br>
+                    <label for="">Direccíon</label><br>
+                    <input type="text"><br>
+                    <label for="">Clave</label><br>
+                    <input type="pas" name="Cliente" id="idcliente"><br>
+                    <label for="">Estado del cliente</label><br>
+                    <input type="text">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Para Agregar -->
+    <div class="modal fade" id="EditarClientes" tabindex="-1" aria-labelledby="EditarClientes" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditarClientes">Agregar clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Nombres del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Apellidos del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Dui</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Correo</label><br>
+                    <input type="email" class="labeltext"><br>
+                    <label for="">Telefono</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Fecha nacimientso</label><br>
+                    <input type="date"><br>
+                    <label for="">Direccíon</label><br>
+                    <input type="text"><br>
+                    <label for="">Clave</label><br>
+                    <input type="pas" name="Cliente" id="idcliente"><br>
+                    <label for="">Estado del cliente</label><br>
+                    <input type="text">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <!--Footer-->
+        <div class="col-12 pt-5 pb-4"">
+            <footer></footer>
+        </div>
+    </div>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+            <script type="text/javascript" src="../../controllers/privado/plantilla.js"></script>
+</body>
+
+</html>
