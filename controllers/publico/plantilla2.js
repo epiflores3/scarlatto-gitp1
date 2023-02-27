@@ -4,7 +4,7 @@ const FOOTER = document.querySelector('footer');
 
 NAV.innerHTML =`
 <div class="wrapper">
-<div class="logo"><a href="index.html">Scarlatto</a></div>
+<div class="logo"><img height="45px" width="45px" src="../../resources/img/logo.png"  alt=""><a href="index.html">Scarlatto</a></div>
 <ul class="nav-links"> 
     <li>
         <a href="producto.html">Productos</a>
