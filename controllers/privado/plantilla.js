@@ -40,7 +40,7 @@ NAV.innerHTML = `
             <div class="col-2">
             <i class="fa-sharp fa-solid fa-house"> </i>
             </div>
-            <div class="col-10">HOME</div>
+            <div class="col-10">Inicio</div>
         </div>
         </a>
     </li>
@@ -111,7 +111,47 @@ NAV.innerHTML = `
             <div class="col-2">
             <i class="fa-solid fa-star"></i>
             </div>
-            <div class="col-10">valoracion</div>
+            <div class="col-10">Valoración</div>
+        </div>
+        </a>
+    </li>
+    <li class="navigation-list-item">
+        <a class="navigation-link" href="categoria_producto.html">
+        <div class="row">
+            <div class="col-2">
+            <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="col-10">Categorías productos</div>
+        </div>
+        </a>
+    </li>
+    <li class="navigation-list-item">
+        <a class="navigation-link" href="talla.html">
+        <div class="row">
+            <div class="col-2">
+            <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="col-10">Tallas</div>
+        </div>
+        </a>
+    </li>
+    <li class="navigation-list-item">
+        <a class="navigation-link" href="material.html">
+        <div class="row">
+            <div class="col-2">
+            <i class="fa-sharp fa-solid fa-recycle"></i>
+            </div>
+            <div class="col-10">Materiales</div>
+        </div>
+        </a>
+    </li>
+    <li class="navigation-list-item">
+        <a class="navigation-link" href="marca.html">
+        <div class="row">
+            <div class="col-2">
+            <i class="fa-sharp fa-regular fa-copyright"></i>
+            </div>
+            <div class="col-10">Marcas</div>
         </div>
         </a>
     </li>
@@ -144,7 +184,7 @@ FOOTER.innerHTML = `
           <br>
           <p>Copyright © 2023 Scarlatto, Inc.</p>
           <br>
-          <a href="#" class="text-dark">Mi cuenta</a> | <a href="#" class="text-dark">Sitio público</a>
+          <a href="../publico/cuenta.html" class="text-dark">Mi cuenta</a> | <a href="../publico/index.html" class="text-dark">Sitio público</a>
       </div>
       <br>
   </div>
