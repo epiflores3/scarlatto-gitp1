@@ -96,26 +96,6 @@ NAV.innerHTML = `
     </li>
     <hr style="margin-top: 30px" />
     <li class="navigation-list-item">
-        <a class="navigation-link" href="detalle_pedido.html">
-        <div class="row">
-            <div class="col-2">
-            <i class="fa-solid fa-file-circle-question"></i>
-            </div>
-            <div class="col-10">Detalles pedido</div>
-        </div>
-        </a>
-    </li>
-    <li class="navigation-list-item">
-        <a class="navigation-link" href="valoracion.html">
-        <div class="row">
-            <div class="col-2">
-            <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="col-10">Valoración</div>
-        </div>
-        </a>
-    </li>
-    <li class="navigation-list-item">
         <a class="navigation-link" href="categoria_producto.html">
         <div class="row">
             <div class="col-2">
