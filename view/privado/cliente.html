@@ -56,11 +56,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="rounded float-end">
-                                                            <button type="button" class="btn"><img height="25px"
+                                                            <!-- Modal Trigger para Agregar -->
+                                                            <button type="button" class="btn" data-bs-toggle="modal"
+                                                                data-bs-target="#AgregarClientes"><img height="25px"
                                                                     width="25px"
                                                                     src="../../resources/img/imgtablas/agregar.png"
                                                                     alt="agregar">
-                                                            </button>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -87,13 +88,17 @@
                                                 <th scope="col"> <button type="button" class="btn btn-success"> <img
                                                             height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/ojo.png"
-                                                            alt="ver"></button> <button type="button"
-                                                        class="btn btn-info"><img height="20px" width="20px"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/update.png"
-                                                            alt="actualizar"> </button>
+                                                            alt="actualizar">
+                                                    </button>
                                                     <button type="button" class="btn btn-danger"><img height="20px"
                                                             width="20px" src="../../resources/img/imgtablas/delete.png"
-                                                            alt="eliminar"></button>
+                                                            alt="eliminar">
+                                                    </button>
                                                 </th>
                                             </tr>
                                             <br>
@@ -105,13 +110,17 @@
                                                 <th scope="col"> <button type="button" class="btn btn-success"> <img
                                                             height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/ojo.png"
-                                                            alt="ver"></button> <button type="button"
-                                                        class="btn btn-info"><img height="20px" width="20px"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/update.png"
-                                                            alt="actualizar"> </button>
+                                                            alt="actualizar">
+                                                    </button>
                                                     <button type="button" class="btn btn-danger"><img height="20px"
                                                             width="20px" src="../../resources/img/imgtablas/delete.png"
-                                                            alt="eliminar"></button>
+                                                            alt="eliminar">
+                                                    </button>
                                                 </th>
                                             </tr>
                                             <br>
@@ -123,13 +132,17 @@
                                                 <th scope="col"> <button type="button" class="btn btn-success"> <img
                                                             height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/ojo.png"
-                                                            alt="ver"></button> <button type="button"
-                                                        class="btn btn-info"><img height="20px" width="20px"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/update.png"
-                                                            alt="actualizar"> </button>
+                                                            alt="actualizar">
+                                                    </button>
                                                     <button type="button" class="btn btn-danger"><img height="20px"
                                                             width="20px" src="../../resources/img/imgtablas/delete.png"
-                                                            alt="eliminar"></button>
+                                                            alt="eliminar">
+                                                    </button>
                                                 </th>
                                             </tr>
                                             <br>
@@ -141,13 +154,17 @@
                                                 <th scope="col"> <button type="button" class="btn btn-success"> <img
                                                             height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/ojo.png"
-                                                            alt="ver"></button> <button type="button"
-                                                        class="btn btn-info"><img height="20px" width="20px"
+                                                            alt="ver"></button>
+                                                    <!-- Modal Trigger para Actualizar -->
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#EditarClientes"><img height="20px" width="20px"
                                                             src="../../resources/img/imgtablas/update.png"
-                                                            alt="actualizar"> </button>
+                                                            alt="actualizar">
+                                                    </button>
                                                     <button type="button" class="btn btn-danger"><img height="20px"
                                                             width="20px" src="../../resources/img/imgtablas/delete.png"
-                                                            alt="eliminar"></button>
+                                                            alt="eliminar">
+                                                    </button>
                                                 </th>
                                             </tr>
                                         </tbody>
@@ -157,6 +174,80 @@
                         </div>
                     </section>
                 </main>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Para Agregar -->
+    <div class="modal fade" id="AgregarClientes" tabindex="-1" aria-labelledby="AgregarClientes" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AgregarClientes">Agregar clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Nombres del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Apellidos del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Dui</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Correo</label><br>
+                    <input type="email" class="labeltext"><br>
+                    <label for="">Telefono</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Fecha nacimientso</label><br>
+                    <input type="date"><br>
+                    <label for="">Direccíon</label><br>
+                    <input type="text"><br>
+                    <label for="">Clave</label><br>
+                    <input type="pas" name="Cliente" id="idcliente"><br>
+                    <label for="">Estado del cliente</label><br>
+                    <input type="text">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Para Actualizar -->
+    <div class="modal fade" id="EditarClientes" tabindex="-1" aria-labelledby="EditarClientes" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditarClientes">Actualizar clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Nombres del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Apellidos del cliente</label><br>
+                    <input type="text" class="labeltext"><br>
+                    <label for="">Dui</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Correo</label><br>
+                    <input type="email" class="labeltext"><br>
+                    <label for="">Telefono</label><br>
+                    <input type="number" class="labeltext"><br>
+                    <label for="">Fecha nacimientso</label><br>
+                    <input type="date"><br>
+                    <label for="">Direccíon</label><br>
+                    <input type="text"><br>
+                    <label for="">Clave</label><br>
+                    <input type="pas" name="Cliente" id="idcliente"><br>
+                    <label for="">Estado del cliente</label><br>
+                    <input type="text">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
             </div>
         </div>
     </div>
