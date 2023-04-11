@@ -13,10 +13,11 @@ class TallaQueries
    
     public function readOne()
     {
-        $sql='SELECT * FROM talla
+        $sql = 'SELECT id_talla, talla 
+        FROM talla
         WHERE id_talla = ?';
         $params = array($this->id);
-        return Database::getRows($sql, $params);
+        return Database::getRow($sql, $params);
     }
 
     public function deleteRow()
@@ -24,6 +25,24 @@ class TallaQueries
         $sql = 'DELETE FROM talla
                 WHERE id_talla = ?';
         $params = array($this->id);
+        return Database::executeRow($sql, $params);
+    }
+    
+   
+    public function createRow()
+    {
+        $sql = 'INSERT INTO talla(talla)
+            VALUES (?)';
+        $params = array($this->talla);
+        return Database::executeRow($sql, $params);
+    }
+
+    public function updateRow()
+    {
+        $sql = 'UPDATE talla
+                SET talla=?
+                WHERE id_talla = ?';
+        $params = array($this->talla, $this->id);
         return Database::executeRow($sql, $params);
     }
 

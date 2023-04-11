@@ -22,6 +22,19 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'No hay datos registrados';
                 }
                 break;
+
+                case 'readOne':
+                    if (!$talla->setId($_POST['id_talla'])) {
+                        $result['exception'] = 'Categoría incorrecta';
+                    } elseif ($result['dataset'] = $talla->readOne()) {
+                        $result['status'] = 1;
+                    } elseif (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'Categoría inexistente';
+                    }
+                    break;
+
             case 'search':
                 $_POST = Validator::validateForm($_POST);
                 if ($_POST['search'] == '') {
@@ -35,68 +48,35 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'No hay coincidencias';
                 }
                 break;
+
             case 'create':
                 $_POST = Validator::validateForm($_POST);
-                if (!$categoria->setNombre($_POST['nombre'])) {
-                    $result['exception'] = 'Nombre incorrecto';
-                } elseif (!$categoria->setDescripcion($_POST['descripcion'])) {
-                    $result['exception'] = 'Descripción incorrecta';
-                } elseif (!is_uploaded_file($_FILES['archivo']['tmp_name'])) {
-                    $result['exception'] = 'Seleccione una imagen';
-                } elseif (!$categoria->setImagen($_FILES['archivo'])) {
-                    $result['exception'] = Validator::getFileError();
-                } elseif ($categoria->createRow()) {
-                    $result['status'] = 1;
-                    if (Validator::saveFile($_FILES['archivo'], $categoria->getRuta(), $categoria->getImagen())) {
-                        $result['message'] = 'Categoría creada correctamente';
-                    } else {
-                        $result['message'] = 'Categoría creada pero no se guardó la imagen';
-                    }
-                } else {
-                    $result['exception'] = Database::getException();
-                }
-                break;
-            case 'readOne':
-                if (!$talla->setId($_POST['id_talla'])) {
+                if (!$talla->setTalla($_POST['talla'])) {
                     $result['exception'] = 'Talla incorrecta';
-                } elseif ($result['dataset'] = $talla->readOne()) {
+                } elseif ($talla->createRow()) {
                     $result['status'] = 1;
-                } elseif (Database::getException()) {
-                    $result['exception'] = Database::getException();
+                    $result['message'] = 'Talla creada correctamente';
                 } else {
-                    $result['exception'] = 'Talla inexistente';
+                    $result['exception'] = Database::getException();
                 }
                 break;
+
             case 'update':
                 $_POST = Validator::validateForm($_POST);
-                if (!$categoria->setId($_POST['id'])) {
-                    $result['exception'] = 'Categoría incorrecta';
-                } elseif (!$data = $categoria->readOne()) {
-                    $result['exception'] = 'Categoría inexistente';
-                } elseif (!$categoria->setNombre($_POST['nombre'])) {
-                    $result['exception'] = 'Nombre incorrecto';
-                } elseif (!$categoria->setDescripcion($_POST['descripcion'])) {
-                    $result['exception'] = 'Descripción incorrecta';
-                } elseif (!is_uploaded_file($_FILES['archivo']['tmp_name'])) {
-                    if ($categoria->updateRow($data['imagen_categoria'])) {
-                        $result['status'] = 1;
-                        $result['message'] = 'Categoría modificada correctamente';
-                    } else {
-                        $result['exception'] = Database::getException();
-                    }
-                } elseif (!$categoria->setImagen($_FILES['archivo'])) {
-                    $result['exception'] = Validator::getFileError();
-                } elseif ($categoria->updateRow($data['imagen_categoria'])) {
+                if (!$talla->setId($_POST['id'])) {
+                    $result['exception'] = 'id de talla incorrecta';
+                } elseif (!$data = $talla->readOne()) {
+                    $result['exception'] = 'talla inexistente';
+                } elseif (!$talla->setTalla($_POST['talla'])) {
+                    $result['exception'] = 'talla incorrecto';
+                } elseif ($talla->updateRow()) {
                     $result['status'] = 1;
-                    if (Validator::saveFile($_FILES['archivo'], $categoria->getRuta(), $categoria->getImagen())) {
-                        $result['message'] = 'Categoría modificada correctamente';
-                    } else {
-                        $result['message'] = 'Categoría modificada pero no se guardó la imagen';
-                    }
+                    $result['message'] = 'Talla modificada correctamente';
                 } else {
                     $result['exception'] = Database::getException();
                 }
                 break;
+
             case 'delete':
                 if (!$talla->setId($_POST['id_talla'])) {
                     $result['exception'] = 'Talla incorrecta';
