@@ -19,7 +19,7 @@ class Material extends MaterialQueries
 
     public function setMaterial($value)
     {
-        if (Validator::validateAlphanumeric($value, 1, 50)) {
+        if (Validator::validateAlphanumeric($value)) {
             $this->nombre_material = $value;
             return true;
         } else {

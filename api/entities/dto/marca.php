@@ -26,4 +26,14 @@ class Marca extends MarcaQueries
             return false;
         }
     }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getMarca()
+    {
+        return $this->marca;
+    }
 }

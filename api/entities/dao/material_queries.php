@@ -10,4 +10,20 @@ class MaterialQueries
         return Database::getRows($sql);
     }
 
+    public function readOne()
+    {
+        $sql='SELECT * FROM material
+        WHERE id_material = ?';
+        $params = array($this->id);
+        return Database::getRows($sql, $params);
+    }
+
+    public function deleteRow()
+    {
+        $sql = 'DELETE FROM material
+                WHERE id_material = ?';
+        $params = array($this->id);
+        return Database::executeRow($sql, $params);
+    }
+
 }

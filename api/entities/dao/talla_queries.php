@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once('../../helpers/database.php');
 
 class TallaQueries
@@ -13,11 +13,10 @@ class TallaQueries
    
     public function readOne()
     {
-        $sql = 'SELECT id_talla, talla 
-        FROM talla
+        $sql='SELECT * FROM talla
         WHERE id_talla = ?';
         $params = array($this->id);
-        return Database::getRow($sql, $params);
+        return Database::getRows($sql, $params);
     }
 
     public function deleteRow()
@@ -25,24 +24,6 @@ class TallaQueries
         $sql = 'DELETE FROM talla
                 WHERE id_talla = ?';
         $params = array($this->id);
-        return Database::executeRow($sql, $params);
-    }
-    
-   
-    public function createRow()
-    {
-        $sql = 'INSERT INTO talla(talla)
-            VALUES (?)';
-        $params = array($this->talla);
-        return Database::executeRow($sql, $params);
-    }
-
-    public function updateRow()
-    {
-        $sql = 'UPDATE talla
-                SET talla=?
-                WHERE id_talla = ?';
-        $params = array($this->talla, $this->id);
         return Database::executeRow($sql, $params);
     }
 

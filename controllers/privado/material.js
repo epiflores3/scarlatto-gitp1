@@ -34,12 +34,12 @@ async function fillTable(form = null) {
                         <img height="20px" width="20px" src="../../resources/img/imgtablas/ojo.png" alt="ver">
                     </button>
 
-                    <button onclick="openUpdate(${row.id_marca})" type="button" class="btn btn-info" data-bs-toggle="modal"
+                    <button onclick="openUpdate(${row.id_material})" type="button" class="btn btn-info" data-bs-toggle="modal"
                         data-bs-target="#editartalla"><img height="20px" width="20px" src="../../resources/img/imgtablas/update.png"
                             alt="actualizar">
                     </button>
 
-                    <button onclick="openDelete(${row.id_marca})" type="button" class="btn btn-danger"><img height="20px"
+                    <button onclick="openDelete(${row.id_material})" type="button" class="btn btn-danger"><img height="20px"
                             width="20px" src="../../resources/img/imgtablas/delete.png" alt="eliminar">
                     </button>
 
@@ -59,4 +59,26 @@ function openCreate() {
 
     // Se asigna título a la caja de diálogo.
     MODAL_TITLE.textContent = 'Crear Talla';
+}
+
+async function openDelete(id) {
+    // Llamada a la función para mostrar un mensaje de confirmación, capturando la respuesta en una constante.
+    const RESPONSE = await confirmAction('¿Desea eliminar el material de forma permanente?');
+    // Se verifica la respuesta del mensaje.
+    if (RESPONSE) {
+        // Se define una constante tipo objeto con los datos del registro seleccionado.
+        const FORM = new FormData();
+        FORM.append('id_material', id);
+        // Petición para eliminar el registro seleccionado.
+        const JSON = await dataFetch(MATERIAL_API, 'delete', FORM);
+        // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
+        if (JSON.status) {
+            // Se carga nuevamente la tabla para visualizar los cambios.
+            fillTable();
+            // Se muestra un mensaje de éxito.
+            sweetAlert(1, JSON.message, true);
+        } else {
+            sweetAlert(2, JSON.exception, false);
+        }
+    }
 }

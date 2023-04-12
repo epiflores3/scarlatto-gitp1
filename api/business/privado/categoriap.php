@@ -98,17 +98,13 @@ if (isset($_GET['action'])) {
                 }
                 break;
             case 'delete':
-                if (!$categoria->setId($_POST['id_categoria'])) {
+                if (!$categoria->setId($_POST['id_categoria_producto'])) {
                     $result['exception'] = 'Categoría incorrecta';
                 } elseif (!$data = $categoria->readOne()) {
                     $result['exception'] = 'Categoría inexistente';
                 } elseif ($categoria->deleteRow()) {
                     $result['status'] = 1;
-                    if (Validator::deleteFile($categoria->getRuta(), $data['imagen_categoria'])) {
-                        $result['message'] = 'Categoría eliminada correctamente';
-                    } else {
-                        $result['message'] = 'Categoría eliminada pero no se borró la imagen';
-                    }
+                    $result['message'] = 'Categoria de producto eliminada correctamente';
                 } else {
                     $result['exception'] = Database::getException();
                 }

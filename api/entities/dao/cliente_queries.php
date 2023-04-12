@@ -11,4 +11,22 @@ class ClienteQuerie
         return Database::getRows($sql);
     }
 
+    public function readOne()
+    {
+        $sql='SELECT * FROM cliente
+        WHERE id_cliente = ?';
+        $params = array($this->id);
+        return Database::getRows($sql, $params);
+    }
+
+    public function deleteRow()
+    {
+        $sql = 'DELETE FROM cliente
+                WHERE id_cliente = ?';
+        $params = array($this->id);
+        return Database::executeRow($sql, $params);
+    }
+
+
+
 }
