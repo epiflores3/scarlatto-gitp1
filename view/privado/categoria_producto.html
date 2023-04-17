@@ -55,7 +55,7 @@
                                                         <div class="rounded float-end">
                                                             <!-- Modal Trigger Agregar-->
                                                             <button type="button" class="btn" data-bs-toggle="modal"
-                                                                data-bs-target="#agregarcategoriapro"><img height="20px"
+                                                                data-bs-target="#agregarcategoriapro" onclick="openCreate()"><img height="20px"
                                                                     width="20px"
                                                                     src="../../resources/img/imgtablas/agregar.png"
                                                                     alt="check">
@@ -113,17 +113,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="agregarcategoriapro">Agregar categoría producto</h5>
+                    <h5 class="modal-title" id="modal-title"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
-                    <form id="producto-modal" method="post" enctype="multipart/form-data">
-                        <input class="hide" type="number" id="id" name="id">
+                    <form method="post" id="categ-form" enctype="multipart/form-data">
+
+                        <input class="invisible" type="number" id="id" name="id">
 
                         <div class="mb-3">
-                            <label for="marca" class="form-label">Categoría producto</label><br>
-                            <input type="text" name="marca" id="marca" class="form-control"><br>
+                            <label for="" class="form-label">Categoría producto</label><br>
+                            <input type="text" name="categoria" id="categoria" class="form-control"><br>
                         </div>
 
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

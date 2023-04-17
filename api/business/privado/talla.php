@@ -33,7 +33,7 @@ if (isset($_GET['action'])) {
                     } else {
                         $result['exception'] = 'Categoría inexistente';
                     }
-                    break;
+                break;
 
             case 'search':
                 $_POST = Validator::validateForm($_POST);
@@ -75,7 +75,7 @@ if (isset($_GET['action'])) {
                 } else {
                     $result['exception'] = Database::getException();
                 }
-                break;
+            break;
 
             case 'delete':
                 if (!$talla->setId($_POST['id_talla'])) {

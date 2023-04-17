@@ -7,6 +7,7 @@ const SAVE_MODAL = new bootstrap.Modal(document.getElementById('agregartalla'));
 // Constantes para cuerpo de la tabla
 const TBODY_ROWS = document.getElementById('tbody-rows');
 const RECORDS = document.getElementById('records');
+
 const SAVE_FORM = document.getElementById('save-form');
 
 //Método para que cargue graficamente la tabla
@@ -82,8 +83,6 @@ async function fillTable(form = null) {
 function openCreate() {
 
     SAVE_FORM.reset();
-
-    
     // Se asigna título a la caja de diálogo.
     MODAL_TITLE.textContent = 'Crear Talla';
 

@@ -39,4 +39,29 @@ class UsuarioQueries
         return Database::getRows($sql);
     }
 
+    public function deleteRow()
+    {
+        $sql = 'DELETE FROM usuario
+                WHERE id_usuario = ?';
+        $params = array($this->id);
+        return Database::executeRow($sql, $params);
+    }
+    
+    public function readOne()
+    {
+        $sql = 'SELECT id_usuario, nombre_usuario, apellido_usuario, correo_usuario, alias_usuario, clave_usuario, tipo_usuario, estado_usuario
+        FROM usuario
+        INNER JOIN tipo_usuario USING(id_tipo_usuario)
+        INNER JOIN estado_usuario USING(id_estado_usuario)
+        WHERE id_usuario = ?';
+        $params = array($this->id);
+        return Database::getRow($sql, $params);
+    }
+
+
+
+
+
+
+
 }

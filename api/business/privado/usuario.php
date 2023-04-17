@@ -78,6 +78,8 @@ if (isset($_GET['action'])) {
                     $result['exception'] = Database::getException();
                 }
                 break;
+
+                
             case 'readAll':
                 if ($result['dataset'] = $usuario->readAll()) {
                     $result['status'] = 1;
@@ -88,6 +90,8 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'No hay datos registrados';
                 }
                 break;
+
+
                  /*AUN NO */
             case 'search':
                 $_POST = Validator::validateForm($_POST);
@@ -124,7 +128,8 @@ if (isset($_GET['action'])) {
                     $result['exception'] = Database::getException();
                 }
                 break;
-                 /*AUN NO */
+                 
+
             case 'readOne':
                 if (!$usuario->setId($_POST['id_usuario'])) {
                     $result['exception'] = 'Usuario incorrecto';
@@ -136,6 +141,8 @@ if (isset($_GET['action'])) {
                     $result['exception'] = 'Usuario inexistente';
                 }
                 break;
+
+
                  /*AUN NO */
             case 'update':
                 $_POST = Validator::validateForm($_POST);
