@@ -1,4 +1,4 @@
- <?php
+<?php
 require_once('../../entities/dto/marca.php');
 
 if (isset($_GET['action'])) {
