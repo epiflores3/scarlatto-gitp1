@@ -118,6 +118,7 @@
 }
 
 
+
 /*******************************LOGIN CAMBIOS CSS************************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
@@ -323,4 +324,10 @@ span a:hover{
         max-width: 420px;
         width: 100%;
     }
+
 }
+
+/*************INPUTS**************/
+/*#id{
+    display: none;
+  }

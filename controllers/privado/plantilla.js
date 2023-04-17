@@ -1,5 +1,7 @@
+
+
 const HEADER = document.querySelector('header');
-const NAV = document.querySelector('nav')
+const NAV = document.querySelector('nav');
 const FOOTER = document.querySelector('footer');
 
 HEADER.innerHTML = `
@@ -136,6 +138,15 @@ NAV.innerHTML = `
         </a>
     </li>
     <br /><br /><br /><br /><br /><br />
+    <li class="navigation-list-item">
+        <a class="navigation-link" onclick="logOut()">
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-10">Salir</div>
+        </div>
+        </a>
+    </li>
     </ul>
 </div>
 `;

@@ -15,36 +15,45 @@
 
     <div class="wrapper">
         <div class="container main">
-            <div class="row inicio">
-                <div class="col-md-6 side-image">
-                    <!----------Imagen---------->
-                    <img class="logo" src="" alt="">
-                    <div class="text">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="col-md-6 right">
-                    <div class="input-box">
-                        <header>Inicio de sesión</header>
-                        <div class="input-field">
-                            <input type="text" class="input" id="email" required autocomplete="off">
-                            <label for="email">Correo electrónico</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="input" id="password" required> 
-                            <label for="password">Contraseña</label>
-                        </div>
-                        <div class="input-field">
-                            <a class="d-grid gap-2" href="dasbord.html"><input type="submit" class="submit" value="Iniciar sesión"></a>
-                        </div>
-                        <div class="signin">
-                            <span> ¿No tienes una cuenta? <a href="#">Crear aquí</a></span>
+            <form id="login" method="post">
+                <div class="row inicio">
+                    <div class="col-md-6 side-image">
+                        <!----------Imagen---------->
+                        <img class="logo" src="" alt="">
+                        <div class="text">
+                            
                         </div>
                     </div>
+                    <div class="col-md-6 right">
+                        <div class="input-box">
+                            <p>Inicio de sesión</p>
+                            <div class="input-field">
+                                <input type="text" class="input" id="email" name="correo" required autocomplete="off" >
+                                <label for="email">Correo electrónico</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" class="input" id="password" name="clave" required> 
+                                <label for="password">Contraseña</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Iniciar sesión">
+                            </div>
+                            <div class="signin">
+                                <span> ¿No tienes una cuenta? <a href="#">Crear aquí</a></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </form>
+            
         </div>
     </div>
+
+ 
+    <script src="../../controllers/privado/account.js"></script>
+    <script src="../../resources/js/sweetalert.min.js"></script>
+    <script src="../../controllers/components.js"></script>
+    <script src="../../controllers/privado/index.js"></script>
 
 </body>
 
